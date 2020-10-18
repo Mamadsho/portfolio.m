@@ -1,0 +1,35 @@
+.page{
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    margin: 1px;
+    background-color: brown;
+    border-radius: 25px;
+}
+.pack{
+    display: inline-block;
+}
+.project{
+    width: max-content;
+    position: relative;
+}
+.slider{
+    position: relative;
+}
+.moving{
+    transition-property: left top;
+    transition-duration: 300ms;
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    /* temporary measure */
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
