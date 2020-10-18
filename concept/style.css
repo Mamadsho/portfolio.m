@@ -17,7 +17,7 @@
     position: relative;
 }
 .moving{
-    transition-property: left top;
+    transition-property: transform;
     transition-duration: 300ms;
 }
 .container{

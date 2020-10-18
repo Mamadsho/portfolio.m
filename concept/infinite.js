@@ -13,7 +13,7 @@ function setup(pr){
     pr.dataset.packWidth=pr.dataset.packSize*clone.offsetWidth;
     clonePack(clone,pr,pr.dataset.packSize-1);
     clonePack(clone,pr,pr.dataset.packSize*3);
-    pr.style.left=-(pr.dataset.packWidth);
+    pr.style.transform=`translateX(${-(pr.dataset.packWidth)}px)`;
 }
 
 function clonePack(pack,pr,n){
@@ -24,9 +24,9 @@ function clonePack(pack,pr,n){
 
 function repositionLoop(tevt){
     let w=parseInt(this.dataset.packWidth) ;
-    let l=-parseInt(this.style.left);
-    console.log(w,l,-(w+l%w))
-    this.style.left=-(w+l%w);
+    let l=-getTranslateX(this);
+
+    this.style.transform=`translateX(${-(w+l%w)}px)`;
 }
 
 

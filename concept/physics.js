@@ -17,16 +17,23 @@ function applyProjectListeners(el){
 
 function tmoveX(tevt){
     changedX=tevt.touches[0].clientX-prevTouchX.clientX;
-    if(parseInt(this.style.left)){
-        var l=parseInt(this.style.left);
-    }else{
-        var l=0;
-    };
-    this.style.left=l+changedX;
+    l=getTranslateX(this);
+    this.style.transform=`translateX(${l+changedX}px)`;
 
     //VARIABLES REASSIGNMENT
     prevTouchX=tevt.touches[0];
 }
+function getTranslateX(pr){
+    var style=window.getComputedStyle(pr);
+    var matrix=new WebKitCSSMatrix(style.transform);
+    return(matrix.m41);
+}
+function getTranslateY(pr){
+    var style=window.getComputedStyle(pr);
+    var matrix=new WebKitCSSMatrix(style.transform);
+    return(matrix.m42);
+}
+
 
 function tendX(tevt){
     //NULLING VARS
@@ -36,12 +43,8 @@ function tendX(tevt){
 
 function tmoveY(tevt){
     changedY=tevt.touches[0].clientY-prevTouchY.clientY;
-    if(parseInt(this.style.top)){
-        var t=parseInt(this.style.top);
-    }else{
-        var t=0;
-    };
-    this.style.top=t+changedY;
+    t=getTranslateY(this);
+    this.style.transform=`translateY(${t+changedY}px)`;
 
     //VARIABLES REASSIGNMENT
     prevTouchY=tevt.touches[0];
