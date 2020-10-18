@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',(a)=>{
         
         this.classList.add('moving')
         //---------MAIN POINT--------
-        this.style.transform=`translateY(${Math.round(t/h)*h})`;
+        this.style.transform=`translateY(${Math.round(t/h)*h}px)`;
         setTimeout(() => {
             this.classList.remove('moving');
         }, parseFloat(window.getComputedStyle(this,null).transitionDuration)*1000);
