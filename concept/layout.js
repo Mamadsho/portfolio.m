@@ -11,4 +11,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     container.style.top=(window.innerHeight-ch)/2;
 
+    vp=document.createElement('div');
+    vp.id='vp';
+    
+    vp.style.width=Math.floor(window.innerWidth/w)*w-2*w;
+    vp.style.height=ch-2*h;
+    vp.style.marginLeft=w;
+    vp.style.marginTop=h;
+    vp.style.backgroundColor='white';
+    vp.style.borderRadius=(w+h)/4+'px';
+    vp.style.position='absolute';
+    vp.style.zIndex=1;
+    container.insertBefore(vp,container.firstChild);
 });
