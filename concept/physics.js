@@ -28,8 +28,8 @@ function getTranslateX(pr){
     var matrix=new WebKitCSSMatrix(style.transform);
     return(matrix.m41);
 }
-function getTranslateY(pr){
-    var style=window.getComputedStyle(pr);
+function getTranslateY(slider){
+    var style=window.getComputedStyle(slider);
     var matrix=new WebKitCSSMatrix(style.transform);
     return(matrix.m42);
 }
