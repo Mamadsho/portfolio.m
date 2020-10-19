@@ -25,6 +25,7 @@ function setupY(slider){
     let packSize=Math.ceil(document.querySelector('.container').offsetHeight/clone.offsetHeight);
     let packHeight=packSize*clone.offsetHeight;
     slider.dataset.packHeight=packHeight;
+    slider.dataset.packSize=packSize;
     clonePack(clone,slider,packSize-1);
     clonePack(clone,slider,packSize*3);
     slider.style.transform=`translateY(${-packHeight}px)`;
@@ -37,10 +38,17 @@ function clonePack(pack,pr,n){
 }
 
 function repositionLoopX(tevt){
-    let w=parseInt(this.dataset.packWidth) ;
-    let l=-getTranslateX(this);
+    const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(this);
+    const yLoop=document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
+    const i=index%yLoop;
+    const comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
 
-    this.style.transform=`translateX(${-(w+l%w)}px)`;
+    comrades.forEach(function(cmr){
+        let w=parseInt(cmr.dataset.packWidth) ;
+        let l=-getTranslateX(cmr);
+        cmr.style.transform=`translateX(${-(w+l%w)}px)`;
+    });
+    
 }
 function repositionLoopY(tevt){
     let h=parseInt(this.dataset.packHeight) ;

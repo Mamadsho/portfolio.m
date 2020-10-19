@@ -4,14 +4,23 @@ document.addEventListener('DOMContentLoaded',(a)=>{
             let l= getTranslateX(pr);
             let samplePageStyle=window.getComputedStyle(pr.querySelector('.page'),null);
             let w= parseInt(samplePageStyle.width)+2*parseInt(samplePageStyle.marginLeft);
+        
+            const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(pr);
+            const yLoop=document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
+            const i=index%yLoop;
+            const comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
+
+            comrades.forEach(function (cmr){
+                cmr.classList.add('moving');
+                //--------MAIN POINT----------
+                cmr.style.transform=`translateX(${Math.round(l/w)*w}px)`;
+                setTimeout(() => {
+                    cmr.classList.remove('moving');
+                }, parseFloat(window.getComputedStyle(pr,null).transitionDuration)*1000);
+            })
+
             
             
-            pr.classList.add('moving');
-            //--------MAIN POINT----------
-            pr.style.transform=`translateX(${Math.round(l/w)*w}px)`;
-            setTimeout(() => {
-                pr.classList.remove('moving');
-            }, parseFloat(window.getComputedStyle(pr,null).transitionDuration)*1000);
         })
     })
     document.querySelector('.slider').addEventListener('touchend',function(evt){

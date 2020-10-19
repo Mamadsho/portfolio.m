@@ -18,10 +18,21 @@ function applyProjectListeners(el){
 function tmoveX(tevt){
     changedX=tevt.touches[0].clientX-prevTouchX.clientX;
     l=getTranslateX(this);
-    this.style.transform=`translateX(${l+changedX}px)`;
+    
+    const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(this);
+    const yLoop=document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
+    const i=index%yLoop;
+    const comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
+    comrades.forEach(function (cmr){
+        cmr.style.transform=`translateX(${l+changedX}px)`;
+    });
 
     //VARIABLES REASSIGNMENT
     prevTouchX=tevt.touches[0];
+}
+
+function pByN(n){
+    return document.querySelector('.slider').querySelectorAll('.project')[n]
 }
 function getTranslateX(pr){
     var style=window.getComputedStyle(pr);
