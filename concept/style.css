@@ -1,9 +1,19 @@
+.activePage{
+    position: absolute;
+    background-color: rgb(101, 222, 243);
+    border: solid rgb(193, 246, 255) 70px;
+    width: 100px;
+    height: 100px;
+    left: -70px;
+    top: -70px;
+    border-end-end-radius: 140px;
+}
 .page{
     display: inline-block;
     height: 48px;
     width: 48px;
     margin: 1px;
-    background-color: brown;
+    background-color: rgb(180, 175, 175);
     border-radius: 25px;
 }
 .pack{
