@@ -46,7 +46,7 @@ body{
     margin: 0;
     overscroll-behavior-x: contain;
     overscroll-behavior-y: contain;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(0, 0, 0);
 }
 html{
     height: -webkit-fill-availale;
