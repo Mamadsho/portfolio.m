@@ -4,9 +4,9 @@
     border: solid rgb(193, 246, 255) 25px;
     width: 50px;
     height: 50px;
-    left: -20px;
-    top: -20px;
-    border-radius: 25px;
+    left: -25px;
+    top: -25px;
+    border-radius: 50px;
 }
 .page{
     display: inline-block;
