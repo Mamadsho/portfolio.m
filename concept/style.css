@@ -1,12 +1,7 @@
 .activePage{
     position: absolute;
-    background-color: rgba(101, 222, 243,0);
-    border: solid rgb(193, 246, 255) 25px;
-    width: 50px;
-    height: 50px;
-    left: -25px;
-    top: -25px;
-    border-radius: 50px;
+    background-color: rgb(101, 222, 243);
+    border: solid rgb(193, 246, 255) 70px;
 }
 .page{
     display: inline-block;
@@ -46,7 +41,7 @@ body{
     margin: 0;
     overscroll-behavior-x: contain;
     overscroll-behavior-y: contain;
-    background-color: rgb(130, 130, 130);
+    background-color: rgb(55, 55, 55);
 }
 html{
     height: -webkit-fill-availale;
