@@ -1,6 +1,8 @@
 .activePage{
     position: absolute;
-    background-color: rgb(101, 222, 243);
+    background-color: rgba(101, 222, 243,0);
+    border: solid rgb(101, 222, 243) 10px;
+    border-radius: 50%;
 }
 .page{
     display: inline-block;
