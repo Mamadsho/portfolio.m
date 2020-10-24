@@ -1,3 +1,4 @@
+selectedProjectN=0;
 document.addEventListener('DOMContentLoaded',(a)=>{
     document.querySelectorAll('.project').forEach((pr)=>{
         pr.addEventListener('touchend',()=>{
@@ -30,8 +31,22 @@ document.addEventListener('DOMContentLoaded',(a)=>{
         let h= parseInt(samplePageStyle.height)+2*parseInt(samplePageStyle.marginTop);
         
         this.classList.add('moving')
-        //---------MAIN POINT--------
+
+        //---------MAIN POINT--------------
+            
+            // DEFINITION OF ACTIVE PAGE
+
+            
+
+        let NoP=Object.keys(data).length; // GET JSON DATA LENGTH
+        //GIVEN
+            console.log('given','top: '+(-Math.round(t/h)*h),'h: '+h,'NoP: '+NoP)
+        selectedProjectN=-Math.round(t/h)%NoP;
+            console.log('selected Project: '+selectedProjectN);
+
         this.style.transform=`translateY(${Math.round(t/h)*h}px)`;
+        //---------END OF MAIN POINT-------    
+
         setTimeout(() => {
             this.classList.remove('moving');
         }, parseFloat(window.getComputedStyle(this,null).transitionDuration)*1000);

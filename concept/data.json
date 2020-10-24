@@ -1,0 +1,56 @@
+{
+    "Home":[
+        {
+            "type":"html",
+            "icon":"projects/home/icon.svg",
+            "inner":{
+                "en":"<h1>Here goes some HTML</h1>",
+                "ru":"<h1>Здесь был HTML</h1>"
+            }
+        },{
+            "type": "image",
+            "icon":"projects/home/icon3.svg",
+            "image": "projects/home/img.jpg",
+            "desc":{
+                "ru":"<p>Здесь было описание</p>",
+                "en":"<p>Here goes some desc</p>"
+            }
+        }
+    ],
+    "STO":[
+        {
+            "type":"html",
+            "icon":"projects/sto/icon3.svg",
+            "inner":{
+                "en":"<h1>Here goes some HTML</h1>",
+                "ru":"<h1>Здесь был HTML</h1>"
+            }
+        },{
+            "type": "image",
+            "icon":"projects/sto/icon3.svg",
+            "image": "projects/sto/img.jpg",
+            "desc":{
+                "ru":"<p>Здесь было описание</p>",
+                "en":"<p>Here goes some desc</p>"
+            }
+        }
+    ],
+    "Drawings":[
+        {
+            "type":"html",
+            "icon":"projects/drawings/icon3.svg",
+            "inner":{
+                "en":"<h1>Here goes some HTML</h1>",
+                "ru":"<h1>Здесь был HTML</h1>"
+            }
+        },{
+            "type": "image",
+            "icon":"projects/drawings/icon3.svg",
+            "image": "projects/drawings/img.jpg",
+            "desc":{
+                "ru":"<p>Здесь было описание</p>",
+                "en":"<p>Here goes some desc</p>"
+            }
+        }
+    ]
+}
