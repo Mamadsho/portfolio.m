@@ -4,6 +4,10 @@
     border: solid rgb(101, 222, 243) 10px;
     border-radius: 50%;
     pointer-events: none;
+    box-shadow: 0 0 20px 6px rgb(101, 222, 243);
+}
+#vp{
+    box-shadow: rgb(101, 222, 243) 1px 3px 20px 2px;
 }
 .page{
     display: inline-block;
