@@ -3,6 +3,7 @@
     background-color: rgba(101, 222, 243,0);
     border: solid rgb(101, 222, 243) 10px;
     border-radius: 50%;
+    pointer-events: none;
 }
 .page{
     display: inline-block;

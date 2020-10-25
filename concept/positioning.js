@@ -1,4 +1,3 @@
-selectedProjectN=0;
 document.addEventListener('DOMContentLoaded',(a)=>{
     document.querySelectorAll('.project').forEach((pr)=>{
         pr.addEventListener('touchend',()=>{
@@ -32,18 +31,7 @@ document.addEventListener('DOMContentLoaded',(a)=>{
         
         this.classList.add('moving')
 
-        //---------MAIN POINT--------------
-            
-            // DEFINITION OF ACTIVE PAGE
-
-            
-
-        let NoP=Object.keys(data).length; // GET JSON DATA LENGTH
-        //GIVEN
-            console.log('given','top: '+(-Math.round(t/h)*h),'h: '+h,'NoP: '+NoP)
-        selectedProjectN=-Math.round(t/h)%NoP;
-            console.log('selected Project: '+selectedProjectN);
-
+        //---------MAIN POINT-------------
         this.style.transform=`translateY(${Math.round(t/h)*h}px)`;
         //---------END OF MAIN POINT-------    
 

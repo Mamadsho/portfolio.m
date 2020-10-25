@@ -1,4 +1,5 @@
 data='';
+lang='ru';
 
 document.addEventListener('DOMContentLoaded',()=>{
     const req= new XMLHttpRequest();
@@ -31,19 +32,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 page.dataset.name=pg;
 
                 try {
-                    isInvalid=true;
-                    while(isInvalid){
-                        r=parseInt(102+Math.random()*150);
-                        g=parseInt(102+Math.random()*150);
-                        b=parseInt(102+Math.random()*150);
-                        if ((299*r+587*g+114*b)/256>600){
-                            isInvalid=false;
-                        }else{
-                            console.log(`color rgb(${r},${g},${b}) got canceled`)
-                        }
-                    }
                     page.style=`background-image:url(${data[pr][pg]["icon"]})`;
-                    //page.style=`background-color:rgb(${r},${g},${b});background-image:url(${data[pr][pg]["icon"]})`;
                 } catch (error) {
                     console.log('error');
                 };
