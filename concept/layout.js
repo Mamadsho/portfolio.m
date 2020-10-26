@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     let h= parseInt(samplePageStyle.height)+2*parseInt(samplePageStyle.marginTop);
     let container=document.querySelector('.container');
     
-    container.style.width=Math.floor(window.innerWidth/w)*w;
+    let cw=Math.floor(window.innerWidth/w)*w;
+    container.style.width=cw;
     let ch=Math.floor(window.innerHeight/h)*h;
     container.style.height=ch;
 
@@ -25,12 +26,27 @@ document.addEventListener('DOMContentLoaded',()=>{
     };
     vps.send();
 
-    //GIVEN ContW,ContH
+    let miny,maxy;
+    let l,t,r,b;
+
+    [miny,maxy]=[Math.min(ch/h,cw/w),Math.max(ch/h,cw/w)];
+
+    try{
+        [l,t,r,b]=vpSizez[miny][maxy].match(/(.*),(.*),(.*),(.*)/).slice(1,5);
+        if(cw>ch){
+            [l,t,r,b]=[t,l,b,r];
+        };
+    }catch{
+        [l,t,r,b]=[2,2,2,2]
+    }
+    //GIVEN ContW,ContH, ltrb
+
+    console.log([l,t,r,b])
     
-    vp.style.width=Math.floor(window.innerWidth/w)*w-2*w;
-    vp.style.height=ch-2*h;
-    vp.style.marginLeft=w;
-    vp.style.marginTop=h;
+    vp.style.width=cw-(parseInt(l)+parseInt(r))*w;
+    vp.style.height=ch-(parseInt(t)+parseInt(b))*h;
+    vp.style.marginLeft=w*parseInt(l);
+    vp.style.marginTop=h*parseInt(t);
     vp.style.borderRadius=(w+h)/4+'px';
     vp.style.position='absolute';
     vp.style.zIndex=1;
