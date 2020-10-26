@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     vp.style.height=ch-2*h;
     vp.style.marginLeft=w;
     vp.style.marginTop=h;
-    vp.style.backgroundColor='white';
     vp.style.borderRadius=(w+h)/4+'px';
     vp.style.position='absolute';
     vp.style.zIndex=1;
