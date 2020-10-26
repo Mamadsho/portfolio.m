@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     let aPgStyle=window.getComputedStyle(document.querySelector('.activePage'),null);
     const offsetWidth=2;
     const w= parseInt(samplePageStyle.width)+2*parseInt(samplePageStyle.marginLeft)+offsetWidth*2;
-    const contTop=parseInt(contStyle.top)-parseInt(aPgStyle.borderTopWidth)-offsetWidth;
-    const contLeft=parseInt(contStyle.marginLeft)-parseInt(aPgStyle.borderLeftWidth)-offsetWidth;
+    const contTop=parseFloat(contStyle.top)-parseInt(aPgStyle.borderTopWidth)-offsetWidth;
+    const contLeft=parseFloat(contStyle.marginLeft)-parseInt(aPgStyle.borderLeftWidth)-offsetWidth;
 
     aPg=document.querySelector('.activePage').style;
     aPg.left=contLeft;

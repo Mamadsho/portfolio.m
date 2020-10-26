@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         // HERE THE ACTION HAPPENS
         // 
 
-        slider=document.querySelector('.slider');
-        projectPack=document.createElement('div');
+        var slider=document.querySelector('.slider');
+        var projectPack=document.createElement('div');
         projectPack.classList.add('projectPack');
 
         for (pr in data){

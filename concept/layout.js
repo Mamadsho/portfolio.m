@@ -11,8 +11,21 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     container.style.top=(window.innerHeight-ch)/2;
 
-    vp=document.createElement('div');
+    let vp=document.createElement('div');
     vp.id='vp';
+
+    //LOADING CSV VPSIZE
+    vpSizez={};
+    vpsOut='';
+    let vps=new XMLHttpRequest();
+    vps.open('GET','vpSizes.csv',false);
+    vps.onreadystatechange=(evt)=>{
+        vpsOut=vps.responseText;
+        vpSizez=CSVToArray(vpsOut);
+    };
+    vps.send();
+
+    //GIVEN ContW,ContH
     
     vp.style.width=Math.floor(window.innerWidth/w)*w-2*w;
     vp.style.height=ch-2*h;
