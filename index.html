@@ -10,7 +10,7 @@
         ScreenOrientation.lock('portrait');
         ScreenOrientation.addEventListener('change', function(e){
             e.preventDefault();
-            console.log(ScreenOrientation.angle);
+            document.querySelector('#info').innerHTML=ScreenOrientation.angle;
         })
     </script>
 </body>
