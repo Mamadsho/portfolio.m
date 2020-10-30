@@ -9,7 +9,6 @@
     <script>
         screen.orientation.lock('portrait-primary');
         screen.orientation.addEventListener('change', function(e){
-            e.preventDefault();
             document.querySelector('#info').innerHTML=screen.orientation.angle;
         })
     </script>
