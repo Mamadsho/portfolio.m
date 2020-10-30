@@ -6,9 +6,14 @@
 </head>
 <body>
     <script>
-        if(window.DeviceOrientationEvent){
-            window.addEventListener('deviceorientation',deviceOrientationHandler,false);
-            document.querySelector('#doeSupported').innerText='Supported!';
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+            document.getElementById("doeSupported").innerText = "Supported!";
+        } else {
+            document.getElementById("doeSupported").innerText = "NotSupported(";
+        }
+        function deviceOrientationHandler(oevt){
+            console.log('DOE happening')
         }
     </script>
     <div id="doeSupported"></div>
