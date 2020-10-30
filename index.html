@@ -2,14 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="studies/touchApi.js"></script>
-    <title>Touch Studies</title>
+    <title>OrintationStudy</title>
 </head>
 <body>
-    <canvas id="canvas" width="600" height="600" style="border: solid black 1px;">
-        Your browser does not support canvas element.
-    </canvas>
-    <br>
-    Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+    <script>
+        if(window.DeviceOrientationEvent){
+            window.addEventListener('deviceorientation',deviceOrientationHandler,false);
+            document.querySelector('#doeSupported').innerText='Supported!';
+        }
+    </script>
+    <div id="doeSupported"></div>
 </body>
 </html>
