@@ -1,3 +1,5 @@
+var trajectoryLength=0;
+
 function startup(evt){
     document.querySelectorAll(".project").forEach(applyProjectListeners);
     applySliderListeners(document.querySelector('.slider'));
@@ -16,6 +18,8 @@ function applyProjectListeners(el){
 
 function tmoveX(tevt){
     let changedX=tevt.touches[0].clientX-prevTouchX.clientX;
+    if (changedX)trajectoryLength+=Math.abs(changedX);//first time there's no prevTouch
+    
     let l=getTranslateX(this);
     
     const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(this);
@@ -47,11 +51,14 @@ function getTranslateY(slider){
 
 function tendX(tevt){
     //NULLING VARS
+    //trajectoryLength=0; is nulled in positioning.js for click physX
     prevTouchX={};
 }
 
 function tmoveY(tevt){
     let changedY=tevt.touches[0].clientY-prevTouchY.clientY;
+    if (changedY)trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
+    
     let t=getTranslateY(this);
     this.style.transform=`translateY(${t+changedY}px)`;
 
@@ -59,7 +66,9 @@ function tmoveY(tevt){
     prevTouchY=tevt.touches[0];
 };
 function tendY(tevt){
+    
     //NULLING VARS
+    //trajectoryLength=0; is nulled in positioning.js for click physX
     prevTouchY={};
 };
 

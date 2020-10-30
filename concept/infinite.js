@@ -38,23 +38,31 @@ function clonePack(pack,pr,n){
 }
 
 function repositionLoopX(tevt){
-    const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(this);
-    const yLoop=document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
-    const i=index%yLoop;
-    const comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
-
-    comrades.forEach(function(cmr){
-        let w=parseInt(cmr.dataset.packWidth) ;
-        let l=-getTranslateX(cmr);
-        cmr.style.transform=`translateX(${-(w+l%w)}px)`;
-    });
+    
+    // TIMEOUT is set for making it universal for click physics and drag physics
+    // it should process AFTER positioning
+    setTimeout(()=>{
+        const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(this);
+        const yLoop=document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
+        const i=index%yLoop;
+        const comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
+        comrades.forEach(function(cmr){
+            let w=parseInt(cmr.dataset.packWidth) ;
+            let l=-getTranslateX(cmr);
+            cmr.style.transform=`translateX(${-(w+l%w)}px)`;
+        });
+    },transitionDurationHC) //HARDCODE
+    
     
 }
 function repositionLoopY(tevt){
-    let h=parseInt(this.dataset.packHeight) ;
-    let t=-getTranslateY(this);
 
-    this.style.transform=`translateY(${-(h+t%h)}px)`;
+    // TIMEOUT is set for making it universal for click physics and drag physics
+    setTimeout(()=>{
+        let h=parseInt(this.dataset.packHeight) ;
+        let t=-getTranslateY(this);
+        this.style.transform=`translateY(${-(h+t%h)}px)`;
+    },transitionDurationHC) //HARDCODE
 }
 
 
