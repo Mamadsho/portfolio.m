@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrintationStudy</title>
+</head>
+<body>
+    
+    <div id="doeSupported"></div>
+    <div id="data"></div>
+    <script>
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener('deviceorientation', deviceOrientationHandler, true);
+            document.getElementById("doeSupported").innerText = "Supported!";
+        } else {
+            document.getElementById("doeSupported").innerText = "NotSupported(";
+        }
+        function deviceOrientationHandler(oevt){
+            document.querySelector('#data').innerHTML=`a: ${oevt.alpha}<br>b: ${oevt.beta}<br>g: ${oevt.gamma}`
+        }
+    </script>
+</body>
+</html>
