@@ -7,10 +7,10 @@
 <body>
     <div id="info"></div>
     <script>
-        screen.orientation.lock('portrait');
+        screen.orientation.lock('portrait-primary');
         screen.orientation.addEventListener('change', function(e){
             e.preventDefault();
-            document.querySelector('#info').innerHTML=ScreenOrientation.angle;
+            document.querySelector('#info').innerHTML=screen.orientation.angle;
         })
     </script>
 </body>
