@@ -5,6 +5,9 @@
     <title>OrintationStudy</title>
 </head>
 <body>
+    
+    <div id="doeSupported"></div>
+    <div id="data"></div>
     <script>
         if (window.DeviceOrientationEvent) {
             window.addEventListener('deviceorientation', deviceOrientationHandler, false);
@@ -13,9 +16,8 @@
             document.getElementById("doeSupported").innerText = "NotSupported(";
         }
         function deviceOrientationHandler(oevt){
-            console.log('DOE happening')
+            document.querySelector('#data').innerHTML=`a: ${oevt.alpha}<br>b: ${oevt.beta}<br>g: ${oevt.gamma}`
         }
     </script>
-    <div id="doeSupported"></div>
 </body>
 </html>
