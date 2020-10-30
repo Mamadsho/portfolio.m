@@ -10,7 +10,7 @@
     <div id="data"></div>
     <script>
         if (window.DeviceOrientationEvent) {
-            window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+            window.addEventListener('deviceorientation', deviceOrientationHandler, true);
             document.getElementById("doeSupported").innerText = "Supported!";
         } else {
             document.getElementById("doeSupported").innerText = "NotSupported(";
