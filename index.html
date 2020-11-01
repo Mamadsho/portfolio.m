@@ -3,14 +3,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body>*{
+            background-color: rgb(230, 182, 182);
+            border-radius: 25px;
+            width: 120px;
+            height: 50px;
+        }
+        #info{
+            background-color: azure;
+        }
+    </style>
 </head>
 <body>
     <div id="info"></div>
+    <div id="a">0</div>
+    <div id="b">0</div>
+    <div id="g">0</div>
+    <button onclick="fs()">fullscreen</button>
+    <button onclick="lockOr()">lock</button>
     <script>
-        screen.orientation.lock('portrait-primary');
+        function fs(){
+            document.body.requestFullscreen();
+        }
+        function lockOr(){
+            screen.orientation.lock('landscape');
+        }
+        window.addEventListener('deviceorientation',function (doevt){
+            document.querySelector('#a').innerHTML=doevt.alpha;
+            document.querySelector('#b').innerHTML=doevt.beta;
+            document.querySelector('#g').innerHTML=doevt.gamma;
+
+        },true)
         screen.orientation.addEventListener('change', function(e){
             document.querySelector('#info').innerHTML=screen.orientation.angle;
         })
+
     </script>
 </body>
 </html>
