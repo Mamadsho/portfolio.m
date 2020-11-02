@@ -1,5 +1,9 @@
 screen.orientation.addEventListener('change',(e)=>{
     alert('orientation changed',screen.orientation.angle)
-    drawVp();
-    placeAP();
+    setTimeout(()=>{
+        alert('timeout over');
+        drawVp();
+        placeAP();
+    },150)
+    
 })
