@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded',drawVp,false);
 function drawVp(){
-    alert('drawing Vp')
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);
     let w= parseInt(samplePageStyle.width)+2*parseInt(samplePageStyle.marginLeft);
     let h= parseInt(samplePageStyle.height)+2*parseInt(samplePageStyle.marginTop);
