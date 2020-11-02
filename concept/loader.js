@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 page.dataset.name=pg;
 
                 try {
-                    page.style=`background-image:url(${data[pr][pg]["icon"]})`;
+                    page.style=`background-image:url(${data[pr][pg]["icon"]}); background-color:${data[pr][pg]["color"]}`;
                 } catch (error) {
                     console.log('error');
                 };

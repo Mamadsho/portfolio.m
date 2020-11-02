@@ -1,4 +1,7 @@
-document.addEventListener('DOMContentLoaded',()=>{
+// basically this script creates the viewport
+
+document.addEventListener('DOMContentLoaded',drawVp,false);
+function drawVp(){
     
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);
     let w= parseInt(samplePageStyle.width)+2*parseInt(samplePageStyle.marginLeft);
@@ -11,9 +14,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     container.style.height=ch;
 
     container.style.top=(window.innerHeight-ch)/2;
-
-    let vp=document.createElement('div');
-    vp.id='vp';
+    if(document.querySelector('#vp')){
+        var vp=document.querySelector('#vp');
+    }else{
+        var vp=document.createElement('div');
+        vp.id='vp';
+    }
 
     //LOADING CSV VPSIZE
     vpSizez={};
@@ -52,4 +58,4 @@ document.addEventListener('DOMContentLoaded',()=>{
     vp.style.zIndex=1;
     vp.style.overflow='scroll'
     container.insertBefore(vp,container.firstChild);
-});
+}

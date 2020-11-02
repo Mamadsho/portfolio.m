@@ -1,5 +1,5 @@
 
-function startup2(env){
+function infinitize(){
     document.querySelectorAll(".project").forEach((p)=>{
         setupX(p);
     })
@@ -13,7 +13,8 @@ function startup2(env){
 
 function setupX(pr){
     let clone=pr.querySelector('.pack');
-    pr.dataset.packSize=Math.ceil(document.querySelector('.container').offsetWidth/clone.offsetWidth);
+    let cont=document.querySelector('.container');
+    pr.dataset.packSize=Math.ceil(Math.max(cont.offsetHeight,cont.offsetWidth)/clone.offsetWidth);//Math.max is used for orientation compatibility
     pr.dataset.packWidth=pr.dataset.packSize*clone.offsetWidth;
     clonePack(clone,pr,pr.dataset.packSize-1);
     clonePack(clone,pr,pr.dataset.packSize*3);
@@ -22,7 +23,8 @@ function setupX(pr){
 
 function setupY(slider){
     let clone=document.querySelector('.projectPack');
-    let packSize=Math.ceil(document.querySelector('.container').offsetHeight/clone.offsetHeight);
+    let cont=document.querySelector('.container');
+    let packSize=Math.ceil(Math.max(cont.offsetHeight,cont.offsetWidth)/clone.offsetHeight);//Math.max is used for orientation compatibility
     let packHeight=packSize*clone.offsetHeight;
     slider.dataset.packHeight=packHeight;
     slider.dataset.packSize=packSize;
@@ -33,7 +35,9 @@ function setupY(slider){
 
 function clonePack(pack,pr,n){
     for (let index = 0; index < n; index++) {
-        pr.appendChild(pack.cloneNode(true));    
+        let dummy=pack.cloneNode(true);
+        dummy.classList.add('dummy');
+        pr.appendChild(dummy);    
     }
 }
 
@@ -66,4 +70,4 @@ function repositionLoopY(tevt){
 }
 
 
-document.addEventListener('DOMContentLoaded',startup2)
+document.addEventListener('DOMContentLoaded',infinitize)
