@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     placeAP();
 })
 function placeAP(){
+    alert('placing Active Page Symbol')
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);
     let contStyle=window.getComputedStyle(document.querySelector('.container'),null);
     let aPgStyle=window.getComputedStyle(document.querySelector('.activePage'),null);
