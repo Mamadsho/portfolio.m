@@ -1,3 +1,16 @@
+.starter{
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+#logo_container{
+    position: relative;
+    width: min(60%,340px);
+    margin: auto;
+    margin-top: calc(50vh - 170px);
+}
 .activePage{
     position: absolute;
     background-color: rgba(101, 222, 243,0);
