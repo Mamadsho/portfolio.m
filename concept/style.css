@@ -7,9 +7,50 @@
 }
 #logo_container{
     position: relative;
-    width: min(60%,340px);
+    width: min(80%, 340px);
     margin: auto;
     margin-top: calc(50vh - 170px);
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+.toggle_container{
+    margin: 10px auto 10px auto;
+    width: max-content;
+    border-radius: 25px;
+    background-color: rgb(89 141 150);
+}
+.toggle_button{
+    display: inline-block;
+    width: min(35px,12vw);
+    height: min(35px,12vw);
+    margin: 3px;;
+    border-radius: 25px;
+    background-color: aqua;
+    background-size: cover;
+    background-position-x: center;
+}
+.menu_space{
+    width: min(60px,7vw);
+}
+.timer{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0;
+    /* background-color: rgb(241, 64, 64); */
+    border: solid rgb(89 141 150) 4px;
+    font-size: 60px;
+    text-align: center;
+    color: aqua;
 }
 .activePage{
     position: absolute;
@@ -63,6 +104,7 @@ body{
     overscroll-behavior-x: contain;
     overscroll-behavior-y: contain;
     background-color: rgb(43, 49, 51);
+    font-family: Arial, Helvetica, sans-serif;
 }
 html{
     height: -webkit-fill-availale;
