@@ -39,7 +39,8 @@ function toggle_fs(){
         document.body.requestFullscreen();
         fs=true;
     }
-    toggleElement(document.querySelector('#fs'))    
+    toggleElement(document.querySelector('#fs'));
+    redrawLayout();  
 }
 document.addEventListener('DOMContentLoaded',()=>{
     startTimer(4,document.querySelector('.timer'))
