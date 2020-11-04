@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 .starter{
     position: absolute;
     background-color: black;
@@ -7,9 +8,8 @@
 }
 #logo_container{
     position: relative;
-    width: min(80%, 340px);
+    width: min(70vh, 80vw, 340px);
     margin: auto;
-    margin-top: calc(50vh - 170px);
 }
 .menu{
     display: flex;
@@ -18,17 +18,18 @@
     margin: auto;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
 .toggle_container{
-    margin: 10px auto 10px auto;
+    margin: min(2vh, 8px) auto min(2vh, 8px) auto;
     width: max-content;
     border-radius: 25px;
     background-color: rgb(89 141 150);
 }
 .toggle_button{
     display: inline-block;
-    width: min(35px,12vw);
-    height: min(35px,12vw);
+    width: min(10vh, 35px,12vw);
+    height: min(10vh, 35px,12vw);
     margin: 3px;;
     border-radius: 25px;
     background-color: aqua;
@@ -36,19 +37,19 @@
     background-position-x: center;
 }
 .menu_space{
-    width: min(60px,7vw);
+    width: min(60px,7vw,10vh);
 }
 .timer{
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
-    width: 100px;
-    height: 100px;
+    width: min(30vh, 35vw,100px);
+    height: min(30vh, 35vw,100px);
     border-radius: 50%;
     margin: 0;
     /* background-color: rgb(241, 64, 64); */
     border: solid rgb(89 141 150) 4px;
-    font-size: 60px;
+    font-size: min(20vh, 23vw,65px);
     text-align: center;
     color: aqua;
 }
@@ -104,7 +105,7 @@ body{
     overscroll-behavior-x: contain;
     overscroll-behavior-y: contain;
     background-color: rgb(43, 49, 51);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 html{
     height: -webkit-fill-availale;
