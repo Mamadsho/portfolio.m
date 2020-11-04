@@ -43,5 +43,8 @@ function toggle_fs(){
     redrawLayout();  
 }
 document.addEventListener('DOMContentLoaded',()=>{
-    startTimer(4,document.querySelector('.timer'))
+    startTimer(4,document.querySelector('.timer'));
+    setTimeout(()=>{
+        document.querySelector('.starter').remove()
+    },5000)
 })
