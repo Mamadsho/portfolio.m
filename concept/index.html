@@ -30,8 +30,8 @@
         <div style="position: relative;">
             <div class="menu">
                 <div>
-                    <div class="toggle_container"><div class="toggle_button" style="background-image: url('ru.svg');"></div><div class="toggle_button" style="background-image: url('uk.svg');"></div></div>
-                    <div class="toggle_container"><div class="toggle_button" style="background-image: url('fs_off.svg');"></div><div class="toggle_button" style="background-image: url('fs_on.svg');"></div></div>
+                    <div class="toggle_container" id='lang' onclick="toggle_lang()"><div class="toggle_button" style="background-image: url('ru.svg');background-color:rgb(195 246 255);box-shadow: 0 0 0px 6px rgb(101, 222, 243);"></div><div class="toggle_button" style="background-image: url('uk.svg');"></div></div>
+                    <div class="toggle_container" id='fs' onclick="toggle_fs()"><div class="toggle_button" style="background-image: url('fs_off.svg');;background-color:rgb(195 246 255);box-shadow: 0 0 0px 6px rgb(101, 222, 243);"></div><div class="toggle_button" style="background-image: url('fs_on.svg');"></div></div>
                 </div>
                 <div class="menu_space"></div>
                 <div>
@@ -50,7 +50,8 @@
     </div>
     <div class='activePage'></div>
     <script>
-        lang='en';
+        lang='ru';
+        fs=false;
         document.addEventListener('DOMContentLoaded',()=>{
             lazyLoad('Home',0);
         })    

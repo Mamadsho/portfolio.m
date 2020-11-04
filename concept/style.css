@@ -32,7 +32,8 @@
     height: min(10vh, 35px,12vw);
     margin: 3px;;
     border-radius: 25px;
-    background-color: aqua;
+    border: solid black 2px;
+    background-color:#9cd2d2;
     background-size: cover;
     background-position-x: center;
 }
