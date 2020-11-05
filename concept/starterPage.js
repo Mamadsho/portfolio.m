@@ -59,5 +59,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     startTimer(6,document.querySelector('.timer'));
     setTimeout(()=>{
         if(document.querySelector('.starter')) letsGo();
+        document.body.addEventListener('touchend', remove_hints)
     },7000)
 })
+function remove_hints(){
+    document.querySelector('#hints').remove();
+    document.body.removeEventListener('touchend',remove_hints);
+}
