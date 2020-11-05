@@ -43,6 +43,9 @@ function toggle_fs(){
     redrawLayout();  
 }
 function letsGo(){
+    drawVp();
+    placeAP();
+    lazyLoad('Home',0);
     document.querySelector('#goline').classList.add('gogogo');
     document.querySelector('.starter').classList.add('starterGo');
     setTimeout(()=>{
@@ -54,5 +57,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('.menu').classList.add('menu_anim');
     document.querySelector('#goline').classList.add('menu_anim');
     startTimer(6,document.querySelector('.timer'));
-    setTimeout(letsGo,7000)
+    setTimeout(()=>{
+        if(document.querySelector('.starter')) letsGo();
+    },7000)
 })

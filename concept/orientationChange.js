@@ -1,4 +1,4 @@
-screen.orientation.addEventListener('change',redrawLayout)
+window.addEventListener('resize',redrawLayout)
 function redrawLayout(){
     setTimeout(()=>{
         drawVp();

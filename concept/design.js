@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('.slider').addEventListener('touchend',(evt)=>{
         document.querySelector('#vp').style.opacity='100%';
     })
-
-    placeAP();
 })
 function placeAP(){
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);

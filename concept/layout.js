@@ -1,6 +1,6 @@
 // basically this script creates the viewport
 
-document.addEventListener('DOMContentLoaded',drawVp,false);
+// document.addEventListener('DOMContentLoaded',drawVp,false);
 function drawVp(){
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);
     let w= parseInt(samplePageStyle.width)+2*parseInt(samplePageStyle.marginLeft);
