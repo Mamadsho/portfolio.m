@@ -11,7 +11,7 @@ function startTimer(duration, display) {
         display.textContent = seconds;
 
         if (--timer < 0) {
-            timer = duration;
+            timer = 0;
         }
     }, 1000);
 }
@@ -42,9 +42,17 @@ function toggle_fs(){
     toggleElement(document.querySelector('#fs'));
     redrawLayout();  
 }
-document.addEventListener('DOMContentLoaded',()=>{
-    startTimer(4,document.querySelector('.timer'));
+function letsGo(){
+    document.querySelector('#goline').classList.add('gogogo');
+    document.querySelector('.starter').classList.add('starterGo');
     setTimeout(()=>{
         document.querySelector('.starter').remove()
-    },5000)
+    },800)
+}
+document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelector('#logo_container').classList.add('logo_anim');
+    document.querySelector('.menu').classList.add('menu_anim');
+    document.querySelector('#goline').classList.add('menu_anim');
+    startTimer(6,document.querySelector('.timer'));
+    setTimeout(letsGo,7000)
 })
