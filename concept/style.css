@@ -12,63 +12,6 @@
     margin: auto;
     transform: translateY(calc(50vh - 66%));
 }
-@keyframes logoLightUp{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-    75%{
-        opacity: 1;
-        transform: translateY(calc(50vh - 66%));
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-@keyframes menuLightUp{
-    0%{
-        opacity: 0;
-    }
-    80%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes gogogo{
-    25%{
-        transform: translateX(-35%)
-    }
-    100%{
-        transform: translateX(50%)
-    }
-}
-@keyframes starterGo{
-    27%{
-        transform: translateX(0%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
-}
-.logo_anim{
-    animation: logoLightUp 3s forwards;
-}
-.menu_anim{
-    animation: menuLightUp 3s forwards;
-}
-.gogogo{
-    animation: gogogo .75s forwards;
-}
-.starterGo{
-    animation: starterGo .75s forwards;
-}
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -127,19 +70,86 @@
     mask: url('arrows.svg');
     mask-size: contain;
     mask-position: right;
+    -webkit-mask: url('arrows.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-position: right;
     width: calc(50% - 50px);
 }
 #rarrow{
     mask-position: left;
+    -webkit-mask-position: left;
 }
 .go{
     mask: url('go.svg');
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
+    -webkit-mask: url('go.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
     width: 100px;
     /* margin: 0 10 0 10; */
 }
+
+@keyframes logoLightUp{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+        transform: translateY(calc(50vh - 66%));
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes menuLightUp{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes gogogo{
+    25%{
+        transform: translateX(-35%)
+    }
+    100%{
+        transform: translateX(50%)
+    }
+}
+@keyframes starterGo{
+    27%{
+        transform: translateX(0%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+.logo_anim{
+    animation: logoLightUp 3s forwards;
+}
+.menu_anim{
+    animation: menuLightUp 3s forwards;
+}
+.gogogo{
+    animation: gogogo .75s forwards;
+}
+.starterGo{
+    animation: starterGo .75s forwards;
+}
+
 .activePage{
     position: absolute;
     background-color: rgba(101, 222, 243,0);
@@ -147,6 +157,36 @@
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 20px 6px rgb(101, 222, 243);
+}
+#hints{
+    position: absolute;
+    z-index: 1;
+}
+@keyframes hinting{
+    0%{
+        transform: translateX(calc(110px - 50%)) translateY(calc((50px - 100%) / 2));
+    }
+    50%{
+        transform: translateX(calc(95px - 50%)) translateY(calc((50px - 100%) / 2));
+    }
+    100%{
+        transform: translateX(calc(110px - 50%)) translateY(calc((50px - 100%) / 2));
+    }
+}
+.hint{
+    position: absolute;
+    background-color: #00ffffbd;
+    background-image: url('hint.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 30px;
+    border-radius: 29px;
+    border: solid black 2px;
+    z-index: 1;
+    animation: hinting .5s both;
+    animation-iteration-count: infinite;
 }
 #vp{
     box-shadow: rgb(101, 222, 243) 1px 3px 20px 4px;
