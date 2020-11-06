@@ -192,8 +192,12 @@
     animation-iteration-count: infinite;
 }
 #vp{
-    box-shadow: rgb(101, 222, 243) 1px 3px 20px 4px;
+    box-shadow: rgb(101, 222, 243) 1px 5px 20px 4px;
     background-color: #f3fafc;
+    background-size: cover;
+}
+.html_container{
+    padding: 12.5px;
 }
 .page{
     display: inline-block;
