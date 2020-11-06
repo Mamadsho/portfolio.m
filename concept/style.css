@@ -12,6 +12,9 @@
     margin: auto;
     transform: translateY(calc(50vh - 66%));
 }
+.hidden{
+    visibility: hidden;
+}
 .menu{
     display: flex;
     flex-wrap: wrap;

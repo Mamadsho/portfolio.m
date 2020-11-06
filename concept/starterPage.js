@@ -54,6 +54,8 @@ function letsGo(){
 }
 document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('#logo_container').classList.add('logo_anim');
+    document.querySelector('.menu').classList.remove('hidden');
+    document.querySelector('#goline').classList.remove('hidden');
     document.querySelector('.menu').classList.add('menu_anim');
     document.querySelector('#goline').classList.add('menu_anim');
     startTimer(6,document.querySelector('.timer'));
