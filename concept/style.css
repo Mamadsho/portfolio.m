@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); */
 .starter{
     position: absolute;
     background-color: black;
@@ -198,6 +198,13 @@
 }
 .html_container{
     padding: 12.5px;
+}
+.image_viewer{
+    position: absolute;
+    transform-origin: top left;
+}
+.img_rotate{
+    transform: rotate(90deg)  translateY(-100%);
 }
 .page{
     display: inline-block;

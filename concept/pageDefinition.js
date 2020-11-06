@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 console.log('Selection: ',selectedProjectN,selectedPageN);
 
                 //LAZY LOADING
-                lazyLoad(Object.keys(data)[selectedProjectN],selectedPageN)
+                lazyLoad(Object.keys(data)[selectedProjectN],selectedPageN);
             },transitionDurationHC);//HARDCODE
         })
         
