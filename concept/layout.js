@@ -53,8 +53,5 @@ function drawVp(){
     vp.style.marginLeft=w*parseInt(l);
     vp.style.marginTop=h*parseInt(t);
     vp.style.borderRadius=(w+h)/4+'px';
-    vp.style.position='absolute';
-    vp.style.zIndex=1;
-    vp.style.overflow='scroll'
     container.insertBefore(vp,container.firstChild);
 }
