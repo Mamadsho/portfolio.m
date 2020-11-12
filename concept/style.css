@@ -41,6 +41,10 @@
     background-size: cover;
     background-position-x: center;
 }
+.toggle_button_active{
+    background-color: rgb(195, 246, 255);
+    box-shadow: rgb(101, 222, 243) 0px 0px 0px 6px;
+}
 .menu_space{
     width: min(60px,7vw,10vh);
 }

@@ -15,21 +15,21 @@ function startTimer(duration, display) {
         }
     }, 1000);
 }
-function toggleElement(el){
-    c1_bgColor=el.children[0].style.backgroundColor;
-    c1_boxShadow=el.children[0].style.boxShadow;
-    c2_bgColor=el.children[1].style.backgroundColor;
-    c2_boxShadow=el.children[1].style.boxShadow;
-
-    el.children[0].style.backgroundColor=c2_bgColor;
-    el.children[0].style.boxShadow=c2_boxShadow;
-    el.children[1].style.backgroundColor=c1_bgColor;
-    el.children[1].style.boxShadow=c1_boxShadow;
-
+function toggleElement(el,n){
+    let activeButton=el.querySelector('.toggle_button_active');
+    activeButton.classList.remove('toggle_button_active');
+    el.children[n].classList.add('toggle_button_active');
 }
 function toggle_lang(){
-    (lang!='ru')? lang='ru':lang='en';
-    toggleElement(document.querySelector('#lang'))
+    if (lang!='ru'){
+        lang='ru';
+        toggleElement(document.querySelector('#lang'),0);
+        console.log('ru')
+    }else{
+        lang='en';
+        toggleElement(document.querySelector('#lang'),1);
+        console.log('en');
+    };
 }
 function toggle_fs(){
     if (fs){
@@ -39,8 +39,14 @@ function toggle_fs(){
         document.body.requestFullscreen();
         fs=true;
     }
-    toggleElement(document.querySelector('#fs'));
     redrawLayout();  
+}
+function fs_load(){
+    if(fs){
+        document.querySelector('fs')
+    }else{
+
+    }
 }
 function letsGo(){
     drawVp();
