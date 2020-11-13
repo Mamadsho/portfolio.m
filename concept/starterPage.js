@@ -24,19 +24,20 @@ function toggle_lang(){
     if (lang!='ru'){
         lang='ru';
         toggleElement(document.querySelector('#lang'),0);
-        console.log('ru')
     }else{
         lang='en';
         toggleElement(document.querySelector('#lang'),1);
-        console.log('en');
     };
+    redrawLayout();  
 }
 function toggle_fs(){
     if (fs){
         document.exitFullscreen()
+        // toggleElement(document.querySelector('#fs'),0);
         fs=false;
     }else{
         document.body.requestFullscreen();
+        // toggleElement(document.querySelector('#fs'),0);
         fs=true;
     }
     redrawLayout();  

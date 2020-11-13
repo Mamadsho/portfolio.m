@@ -2,10 +2,17 @@ function lazyLoad(pr,pg){
     let vp=document.querySelector('#vp');
     page=data[pr][pg]
     if(page['type']=='html'){
-        console.log('html');
         let container=document.createElement('div');
         container.classList.add('html_container');
         container.innerHTML=page['inner'][lang];
+        vp.innerHTML='';
+        vp.style.backgroundImage='';
+        vp.appendChild(container);
+    };
+    if(page['type']=='settings'){
+        let container=document.createElement('div');
+        container.classList.add('html_container');
+        container.innerHTML=`<h1>${(lang=='ru')?'Настройки':'Settings'}</h1><div class='itemlist'><div style='padding-bottom: 0;padding-top: 0;'><div class='itemkey'>${(lang=='ru')?'Язык':'Language'}</div><div class='itemvalue' style='background-color: inherit;padding: 0;'><div class='toggle_container' id='lang' onclick='toggle_lang()'><div class='toggle_button ${(lang=='ru')?'toggle_button_active':''}' style='background-image: url(\"ru.svg\")'></div><div class='toggle_button ${(lang=='en')?'toggle_button_active':''}' style='background-image: url(\"uk.svg\");'></div></div></div></div><div style='padding-bottom: 0;padding-top: 0;'><div class='itemkey'>${(lang=='ru')?'Полноэкранный режим':'Fullscreen'}</div><div class='itemvalue' style='background-color: inherit;padding: 0;'><div class='toggle_container' id='fs' onclick='toggle_fs()'><div class='toggle_button ${(fs)?'':'toggle_button_active'}' style='background-image: url(\"fs_off.svg\")'></div><div class='toggle_button ${(fs)?'toggle_button_active':''}' style='background-image: url(\"fs_on.svg\");'></div></div></div></div></div>`;
         vp.innerHTML='';
         vp.style.backgroundImage='';
         vp.appendChild(container);
