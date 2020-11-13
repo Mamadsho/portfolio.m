@@ -323,7 +323,10 @@ html{
 }
 .itemlist{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
 }
 .itemlist>*{
     display: flex;
@@ -335,6 +338,8 @@ html{
     border-radius: 25px;
     padding: 8px;
     margin: 2px;
+    width: 263px;
+    flex-grow: 1;
 }
 .itemkey{
     display: flex;
@@ -381,4 +386,3 @@ div.skill_dash:nth-child(4) {
     border-bottom-right-radius: 15px;
     margin-right: 0px;
 }
-
