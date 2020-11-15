@@ -257,7 +257,9 @@
     width: 48px;
     margin: 1px;
     background-color: rgb(180, 175, 175);
-    background-size: contain;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 25px;
 }
 .pack{
@@ -385,4 +387,14 @@ div.skill_dash:nth-child(4) {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-right: 0px;
+}
+
+.contact_item_icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  a{
+    color: rgb(15, 71, 89);
+    text-decoration-color: rgba(101, 91, 146, 0.479);
 }
