@@ -392,9 +392,15 @@ div.skill_dash:nth-child(4) {
 .contact_item_icon {
     width: 35px;
     height: 35px;
-  }
-
-  a{
+}
+a{
     color: rgb(15, 71, 89);
     text-decoration-color: rgba(101, 91, 146, 0.479);
+}
+
+#interests > * {
+    width: auto;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid;
 }
