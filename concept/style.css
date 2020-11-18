@@ -101,60 +101,60 @@
 
 @keyframes logoLightUp{
     0%{
-        opacity: 0;
+        /* opacity: 0; */
+        filter: hue-rotate(0deg);
     }
     25%{
-        opacity: 1;
+        /* opacity: 1; */
     }
     50%{
-        opacity: 0;
+        /* opacity: 0; */
     }
     75%{
-        opacity: 1;
-        transform: translateY(calc(50vh - 66%));
+        /* opacity: 1; */
+        /* transform: translateY(calc(50vh - 66%)); */
     }
     100%{
-        transform: translateY(0);
+        filter: hue-rotate(360deg);
+        /* transform: translateY(0); */
     }
 }
-@keyframes menuLightUp{
+@keyframes slideIn{
+    0%{
+        left: 400%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fadeIn{
     0%{
         opacity: 0;
     }
-    80%{
-        opacity: 0;
-    }
     100%{
         opacity: 1;
     }
 }
-@keyframes gogogo{
-    25%{
-        transform: translateX(-35%)
-    }
-    100%{
-        transform: translateX(50%)
-    }
-}
-@keyframes starterGo{
-    27%{
-        transform: translateX(0%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
-}
 .logo_anim{
-    animation: logoLightUp 3s forwards;
+    animation: logoLightUp 3s infinite linear;
 }
-.menu_anim{
-    animation: menuLightUp 3s forwards;
-}
-.gogogo{
-    animation: gogogo .75s forwards;
+.slide-in{
+    animation: slideIn 1s forwards;
 }
 .starterGo{
-    animation: starterGo .75s forwards;
+    animation: fadeOut .75s forwards;
+}
+.showUp{
+    animation: fadeIn .75s forwards;
+    animation-delay: 1s;
 }
 
 .activePage{
@@ -164,10 +164,14 @@
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 20px 6px rgb(101, 222, 243);
+    /* for showUp animation */
+    opacity: 0;
 }
 #hints{
     position: absolute;
     z-index: 1;
+    /* for showUp animation */
+    opacity: 0;
 }
 @keyframes hinting{
     0%{
@@ -202,6 +206,8 @@
     box-shadow: rgb(101, 222, 243) 1px 5px 20px 4px;
     background-color: #f3fafc;
     background-size: cover;
+    /* for showUp animation */
+    opacity: 0;
 }
 .html_container{
     padding: 12.5px;
@@ -271,6 +277,8 @@
 }
 .slider{
     position: relative;
+    left: 400%;
+    /* some of its styling is inside html */
 }
 .moving{
     transition-property: transform;

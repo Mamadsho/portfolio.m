@@ -53,23 +53,27 @@ function letsGo(){
     drawVp();
     placeAP();
     lazyLoad('Home',0);
-    document.querySelector('#goline').classList.add('gogogo');
+    // document.querySelector('#goline').classList.add('gogogo');
     document.querySelector('.starter').classList.add('starterGo');
     setTimeout(()=>{
-        document.querySelector('.starter').remove()
+        document.querySelector('.starter').remove();
+        document.querySelector('.slider').classList.add('slide-in');
+        document.querySelector('#vp').classList.add('showUp');
+        document.querySelector('.activePage').classList.add('showUp');
+        document.querySelector('#hints').classList.add('showUp');
     },800)
 }
 document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('#logo_container').classList.add('logo_anim');
-    document.querySelector('.menu').classList.remove('hidden');
-    document.querySelector('#goline').classList.remove('hidden');
-    document.querySelector('.menu').classList.add('menu_anim');
-    document.querySelector('#goline').classList.add('menu_anim');
-    startTimer(6,document.querySelector('.timer'));
+    // document.querySelector('.menu').classList.remove('hidden');
+    // document.querySelector('#goline').classList.remove('hidden');
+    // document.querySelector('.menu').classList.add('menu_anim');
+    // document.querySelector('#goline').classList.add('menu_anim');
+    // startTimer(6,document.querySelector('.timer'));
     setTimeout(()=>{
         if(document.querySelector('.starter')) letsGo();
         document.body.addEventListener('touchend', remove_hints)
-    },7000)
+    },4000)
 })
 function remove_hints(){
     document.querySelector('#hints').remove();
