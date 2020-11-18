@@ -57,7 +57,7 @@ function letsGo(){
     document.querySelector('.starter').classList.add('starterGo');
     setTimeout(()=>{
         document.querySelector('.starter').remove();
-        document.querySelector('.slider').classList.add('slide-in');
+        document.querySelector('#sliderHolder').classList.add('slide-in');
         setTimeout(()=>{
             document.querySelector('#vp').classList.add('showUp');
             document.querySelector('.activePage').classList.add('showUp');

@@ -121,10 +121,10 @@
 }
 @keyframes slideIn{
     0%{
-        left: 400%;
+        transform: translateX(50%);
     }
     100%{
-        left: 0%;
+        transform: translateX(0%);
     }
 }
 @keyframes fadeOut{
@@ -275,9 +275,12 @@
     width: max-content;
     position: relative;
 }
+#sliderHolder{
+    position: absolute;
+    transform: translateX(50%);
+}
 .slider{
     position: relative;
-    left: 400%;
     /* some of its styling is inside html */
 }
 .moving{
