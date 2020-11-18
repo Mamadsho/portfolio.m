@@ -346,11 +346,13 @@ html{
 .itemkey{
     display: flex;
     align-items: center;
+    margin: 4px;
 }
 .itemvalue{
     background-color: #f3fafc;
     border-radius: 20px;
     padding: 4px;
+    margin-left: auto;
 }
 h1{
     font-size:min(1.5em,7.6vw);
