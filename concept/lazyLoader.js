@@ -78,3 +78,6 @@ function toggle_desc(){
         desc_cont.style.transform='translateY(0%)';
     }
 }
+function reloadPage(){
+    lazyLoad(Object.keys(data)[selectedProjectN],selectedPageN);
+}

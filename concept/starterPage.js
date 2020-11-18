@@ -28,7 +28,7 @@ function toggle_lang(){
         lang='en';
         toggleElement(document.querySelector('#lang'),1);
     };
-    redrawLayout();  
+    reloadPage();  
 }
 function toggle_fs(){
     if (fs){
@@ -40,7 +40,7 @@ function toggle_fs(){
         // toggleElement(document.querySelector('#fs'),0);
         fs=true;
     }
-    redrawLayout();  
+    reloadPage();  
 }
 function fs_load(){
     if(fs){
@@ -58,9 +58,11 @@ function letsGo(){
     setTimeout(()=>{
         document.querySelector('.starter').remove();
         document.querySelector('.slider').classList.add('slide-in');
-        document.querySelector('#vp').classList.add('showUp');
-        document.querySelector('.activePage').classList.add('showUp');
-        document.querySelector('#hints').classList.add('showUp');
+        setTimeout(()=>{
+            document.querySelector('#vp').classList.add('showUp');
+            document.querySelector('.activePage').classList.add('showUp');
+            document.querySelector('#hints').classList.add('showUp');
+        },1000)//HARDCODE
     },800)
 }
 document.addEventListener('DOMContentLoaded',()=>{

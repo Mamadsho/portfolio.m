@@ -154,7 +154,7 @@
 }
 .showUp{
     animation: fadeIn .75s forwards;
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 
 .activePage{
