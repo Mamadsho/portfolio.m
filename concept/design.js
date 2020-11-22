@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded',()=>{
-    document.querySelector('.slider').addEventListener('touchmove',(evt)=>{
-        document.querySelector('#vp').style.opacity='95%';
-    })
-    document.querySelector('.slider').addEventListener('touchend',(evt)=>{
-        document.querySelector('#vp').style.opacity='100%';
-    })
-})
 function placeAP(){
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);
     let contStyle=window.getComputedStyle(document.querySelector('.container'),null);
