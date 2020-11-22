@@ -294,11 +294,13 @@ body{
     margin: 0;
     overscroll-behavior-x: contain;
     overscroll-behavior-y: contain;
+    overflow: hidden;
     background-color: rgb(43, 49, 51);
     font-family: 'Raleway', sans-serif;
 }
 html{
     height: -webkit-fill-availale;
+    overflow: hidden;
 }
 
 
