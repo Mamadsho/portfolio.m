@@ -245,9 +245,10 @@
     transition-duration: 300ms;
 }
 #desc{
-    padding: 3px 19px;
+    padding: 0px 18px;
     position: absolute;
-    width: 100%;
+    /* HARDCODE */
+    width: calc(100% - 36px);
     height: 100%;
 }
 .page{
