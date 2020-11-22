@@ -1,20 +1,3 @@
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        // seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        // display.textContent = minutes + ":" + seconds;
-        display.textContent = seconds;
-
-        if (--timer < 0) {
-            timer = 0;
-        }
-    }, 1000);
-}
 function toggleElement(el,n){
     let activeButton=el.querySelector('.toggle_button_active');
     activeButton.classList.remove('toggle_button_active');
@@ -50,10 +33,12 @@ function fs_load(){
     }
 }
 function letsGo(){
+    infinitize();
+    applyPhysics();
+    applyPositioning();
     drawVp();
     placeAP();
     lazyLoad('Home',0);
-    // document.querySelector('#goline').classList.add('gogogo');
     document.querySelector('.starter').classList.add('starterGo');
     setTimeout(()=>{
         document.querySelector('.starter').remove();
@@ -67,15 +52,10 @@ function letsGo(){
 }
 document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('#logo_container').classList.add('logo_anim');
-    // document.querySelector('.menu').classList.remove('hidden');
-    // document.querySelector('#goline').classList.remove('hidden');
-    // document.querySelector('.menu').classList.add('menu_anim');
-    // document.querySelector('#goline').classList.add('menu_anim');
-    // startTimer(6,document.querySelector('.timer'));
     setTimeout(()=>{
         if(document.querySelector('.starter')) letsGo();
         document.body.addEventListener('touchend', remove_hints)
-    },4000)
+    },3000)
 })
 function remove_hints(){
     document.querySelector('#hints').remove();

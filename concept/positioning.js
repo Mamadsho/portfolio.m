@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',(a)=>{
+function applyPositioning(){
     document.querySelectorAll('.project').forEach((pr)=>{
         pr.addEventListener('touchend',(tevt)=>{
             let l= getTranslateX(pr);
@@ -51,6 +51,5 @@ document.addEventListener('DOMContentLoaded',(a)=>{
             this.classList.remove('moving');
             trajectoryLength=0;
         }, parseFloat(window.getComputedStyle(this,null).transitionDuration)*1000);
-        
     })
-})
+}

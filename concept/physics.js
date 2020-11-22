@@ -1,11 +1,9 @@
 var trajectoryLength=0;
 var comrades=[];
 
-function startup(evt){
+function applyPhysics(){
     document.querySelectorAll(".project").forEach(applyProjectListeners);
     applySliderListeners(document.querySelector('.slider'));
-
-    
 }
 function applySliderListeners(sl){
     sl.addEventListener('touchmove',tmoveY);
@@ -78,5 +76,3 @@ function tendY(tevt){
 // GLOBAL VARIABLES:
 var prevTouchX={};
 var prevTouchY={};
-
-document.addEventListener("DOMContentLoaded",startup)

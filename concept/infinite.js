@@ -68,6 +68,3 @@ function repositionLoopY(tevt){
         this.style.transform=`translateY(${-(h+t%h)}px)`;
     },transitionDurationHC) //HARDCODE
 }
-
-
-document.addEventListener('DOMContentLoaded',infinitize)
