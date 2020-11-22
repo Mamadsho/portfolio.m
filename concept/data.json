@@ -45,11 +45,11 @@
     "STO":[
         {
             "type":"html",
-            "icon":"projects/sto/icon3.svg",
+            "icon":"projects/sto/sto.png",
             "color":"#51dfdf",
             "inner":{
-                "en":"<h1>Here goes some AQUA HTML</h1>",
-                "ru":"<h1>Здесь был HTML</h1>"
+                "en":"<h1>Automobile Repair Shop</h1><div class='softwares'><div style='background-image: url(&quot;projects/home/skills/icons/revit.png&quot;);border-color: #04174c;background-size: 113%;background-position: -3px -3px;background-color: #e9f4ff;'></div><div style='background-image: url(&quot;projects/home/skills/icons/autocad.png&quot;);border-color: #e54145;background-size: 111%;background-position: -1px 1px;background-color: #fafafa;'></div><div style='background-image: url(&quot;projects/home/skills/icons/photoshop.png&quot;);border-color: #3bcbf6;background-size: 110%;background-position: center;'></div></div><ul class='tep'><li>Effective Area: 5000 м2</li><li>Volume: --- м3</li><li>Cars: 50 units</li></ul><p class='timeCreated'>May, 2019</p>",
+                "ru":"<h1>Станция технического обслуживания автомобилей</h1><div class='softwares'><div style='background-image: url(&quot;projects/home/skills/icons/revit.png&quot;);border-color: #04174c;background-size: 113%;background-position: -3px -3px;background-color: #e9f4ff;'></div><div style='background-image: url(&quot;projects/home/skills/icons/autocad.png&quot;);border-color: #e54145;background-size: 111%;background-position: -1px 1px;background-color: #fafafa;'></div><div style='background-image: url(&quot;projects/home/skills/icons/photoshop.png&quot;);border-color: #3bcbf6;background-size: 110%;background-position: center;'></div></div><ul class='tep'><li>Полезная Площадь: 5000 м2</li><li>Объем: --- м3</li><li>Машин: 50 ед</li></ul><p class='timeCreated'>Май, 2019</p>"
             }
         },{
             "type": "image",
@@ -71,23 +71,32 @@
             }
         }
     ],
-    "Drawings":[
+    "Assets":[
         {
             "type":"html",
-            "icon":"projects/drawings/icon3.svg",
+            "icon":"projects/assets/assets.png",
             "color":"#a6a6ff",
             "inner":{
-                "en":"<h1>Here goes some BLUE HTML</h1>",
-                "ru":"<h1>Здесь был HTML</h1>"
+                "en":"<h1>Assets</h1><div class='softwares'><div style='background-image: url(&quot;projects/home/skills/icons/blender.png&quot;);border-color: #e8873b;background-size: 113%;background-position: -3px -3px;background-color: #f7f4e5;'></div><div style='background-image: url(&quot;projects/home/skills/icons/spainter.png&quot;);border-color: #e22c3a;background-size: 107%;background-position: -2px -2px;background-color: #fff9f9;'></div><div style='background-image: url(&quot;projects/home/skills/icons/mdesigner.png&quot;);border-color: #f9c236;background-size: 104%;background-position: 0px -1px;background-color: #242424;'></div></div><div class='tep projectInfo'><p>In this section some 3d assets are shown, through which I've been testing some workflows such as PBR, Cloth Simulations</p></div><p class='timeCreated'>- 2020</p>",
+                "ru":"<h1>Станция технического обслуживания автомобилей</h1><div class='softwares'><div style='background-image: url(&quot;projects/home/skills/icons/revit.png&quot;);border-color: #04174c;background-size: 113%;background-position: -3px -3px;background-color: #e9f4ff;'></div><div style='background-image: url(&quot;projects/home/skills/icons/autocad.png&quot;);border-color: #e54145;background-size: 111%;background-position: -1px 1px;background-color: #fafafa;'></div><div style='background-image: url(&quot;projects/home/skills/icons/photoshop.png&quot;);border-color: #3bcbf6;background-size: 110%;background-position: center;'></div></div><ul class='tep'><li>Площадь: --- м2</li><li>Объем: --- м3</li><li>Машин: 50 ед</li></ul><p class='timeCreated'>- 2020</p>"
             }
         },{
             "type": "image",
-            "icon":"projects/drawings/icon3.svg",
+            "icon":"projects/assets/icon3.svg",
             "color":"#7373d7",
-            "image": "projects/drawings/img.jpg",
+            "image": "projects/assets/sarazm_pot.jpg",
             "desc":{
-                "ru":"<p>Здесь было описание</p>",
-                "en":"<p>Here goes some desc</p>"
+                "ru":"<h2>Древний Сосуд</h2><ul><li>Моделирование в Blender</li><li>Текстуры в SubstancePainter</li><li>Рендер движок: Cycles</li></ul>",
+                "en":"<h2>Ancient Pottery</h2><ul><li>Sculpted in Blender</li><li>Textured in SubstancePainter</li><li>RenderEngine: Cycles</li></ul>"
+            }
+        },{
+            "type": "image",
+            "icon":"projects/assets/icon3.svg",
+            "color":"#7373d7",
+            "image": "projects/assets/bowlingPins.jpg",
+            "desc":{
+                "ru":"<h2>Боулинг</h2><ul><li>Сцена выполнена в Blender-е</li><li>Рендер движок: Cycles</li></ul>",
+                "en":"<h2>Bowling</h2><ul><li>Scene is done in Blender</li><li>RenderEngine: Cycles</li></ul>"
             }
         },{
             "type": "image",

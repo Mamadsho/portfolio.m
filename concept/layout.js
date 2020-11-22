@@ -48,8 +48,8 @@ function drawVp(){
 
     console.log([l,t,r,b])
     
-    vp.style.width=cw-(parseInt(l)+parseInt(r))*w;
-    vp.style.height=ch-(parseInt(t)+parseInt(b))*h;
+    vp.style.width=cw-(parseInt(l)+parseInt(r))*w-6; //HARDCODE
+    vp.style.height=ch-(parseInt(t)+parseInt(b))*h-6; //HARDCODE
     vp.style.marginLeft=w*parseInt(l);
     vp.style.marginTop=h*parseInt(t);
     vp.style.borderRadius=(w+h)/4+'px';

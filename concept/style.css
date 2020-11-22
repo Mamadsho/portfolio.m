@@ -197,6 +197,7 @@
     background-size: cover;
     /* for showUp animation */
     visibility: hidden;
+    border: 3px solid rgb(160, 241, 255);
 }
 .html_container{
     padding: 12.5px;
@@ -244,6 +245,7 @@
     transition-duration: 300ms;
 }
 #desc{
+    padding: 3px 19px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -410,4 +412,39 @@ a{
     font-weight: bold;
     border: 2px solid;
     text-align: center;
+}
+
+
+
+.softwares {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #def0ff;
+    border-radius: 35px;
+    border: 2px solid;
+}
+  
+.softwares > * {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: contain;
+    margin: 3px;
+    border: 2px solid black;
+}
+
+.tep{
+    list-style: disclosure-closed;
+    background-color: #ffebba;
+    border: 2px solid;
+    border-radius: 38px;
+    color: #4f4141;
+    margin: 16px 0px;
+}
+.projectInfo{
+    background-color:#e5fffa;
+    padding: 3px 20px;
+}
+.timeCreated{
+    text-align: end;
 }

@@ -54,16 +54,16 @@ function lazyLoad(pr,pg){
             // ri=1.4367816091954022;
             if((rv-1)*(ri-1)>=0){
                 if(rv>ri){
-                    img.style.width=vp.offsetWidth;
+                    img.style.width=vp.offsetWidth-6;//HARDCODE
                 }else{
-                    img.style.height=vp.offsetHeight;
+                    img.style.height=vp.offsetHeight-6;//HARDCODE
                 };
             }else{
                 img.classList.add('img_rotate');
                 if(rv<(1/ri)){
-                    img.style.width=vp.offsetHeight;
+                    img.style.width=vp.offsetHeight-6;//HARDCODE
                 }else{
-                    img.style.height=vp.offsetWidth;
+                    img.style.height=vp.offsetWidth-6;//HARDCODE
                 }
             };
         }   
