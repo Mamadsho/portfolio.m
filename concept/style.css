@@ -128,6 +128,7 @@
         opacity: 0;
     }
     100%{
+        visibility: visible;
         opacity: 1;
     }
 }
@@ -153,13 +154,13 @@
     pointer-events: none;
     box-shadow: 0 0 20px 6px rgb(101, 222, 243);
     /* for showUp animation */
-    opacity: 0;
+    visibility: hidden;
 }
 #hints{
     position: absolute;
     z-index: 1;
     /* for showUp animation */
-    opacity: 0;
+    visibility: hidden;
 }
 @keyframes hinting{
     0%{
@@ -195,7 +196,7 @@
     background-color: #f3fafc;
     background-size: cover;
     /* for showUp animation */
-    opacity: 0;
+    visibility: hidden;
 }
 .html_container{
     padding: 12.5px;
