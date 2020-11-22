@@ -51,11 +51,10 @@ function letsGo(){
     },800)
 }
 document.addEventListener('DOMContentLoaded',()=>{
-    document.querySelector('#logo_container').classList.add('logo_anim');
     setTimeout(()=>{
         if(document.querySelector('.starter')) letsGo();
         document.body.addEventListener('touchend', remove_hints)
-    },3000)
+    },2500)
 })
 function remove_hints(){
     document.querySelector('#hints').remove();

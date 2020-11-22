@@ -223,6 +223,8 @@
     z-index: 1;
 }
 #more{
+    background-image: url('info.png');
+    background-size: contain;
     background-color: rgb(163, 234, 247);
     position: fixed;
     transform: translate(calc(-50px + 50%),calc(-50px + 50%));
