@@ -1,6 +1,3 @@
-window.addEventListener('touchmove',(e)=>{
-    e.preventDefault();
-},{passive:false});
 function placeAP(){
     let samplePageStyle=window.getComputedStyle(document.querySelector('.page'),null);
     let contStyle=window.getComputedStyle(document.querySelector('.container'),null);
