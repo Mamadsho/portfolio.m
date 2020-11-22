@@ -82,16 +82,16 @@
             }
         },{
             "type": "image",
-            "icon":"projects/assets/icon3.svg",
+            "icon":"graphics/rendering.png",
             "color":"#7373d7",
             "image": "projects/assets/sarazm_pot.jpg",
             "desc":{
-                "ru":"<h2>Древний Сосуд</h2><ul><li>Моделирование в Blender</li><li>Текстуры в SubstancePainter</li><li>Рендер движок: Cycles</li></ul>",
-                "en":"<h2>Ancient Pottery</h2><ul><li>Sculpted in Blender</li><li>Textured in SubstancePainter</li><li>RenderEngine: Cycles</li></ul>"
+                "ru":"<h2>Древний Сосуд</h2><ul><li>Моделирование в Blender</li><li>Текстуры в SubstancePainter</li><li>Рендер движок: Cycles</li></ul><p>Подготовлен для проекта по виртуальноё реконструкции древнего прото-города Саразм</p>",
+                "en":"<h2>Ancient Pottery</h2><ul><li>Sculpted in Blender</li><li>Textured in SubstancePainter</li><li>RenderEngine: Cycles</li></ul><p>Made for project for Virtual Reconstructioin of Ancient Proto-urban site of Sarazm</p>"
             }
         },{
             "type": "image",
-            "icon":"projects/assets/icon3.svg",
+            "icon":"graphics/rendering.png",
             "color":"#7373d7",
             "image": "projects/assets/bowlingPins.jpg",
             "desc":{
@@ -100,7 +100,7 @@
             }
         },{
             "type": "image",
-            "icon":"projects/sto/icon3.svg",
+            "icon":"graphics/rendering.png",
             "color":"#7373d7",
             "image": "projects/sto/img.jpg",
             "desc":{
