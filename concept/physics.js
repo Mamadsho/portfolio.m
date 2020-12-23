@@ -6,13 +6,13 @@ function applyPhysics(){
     applySliderListeners(document.querySelector('.slider'));
 }
 function applySliderListeners(sl){
-    sl.addEventListener('touchmove',tmoveY);
+    sl.addEventListener('touchmove',tmoveCY);
     sl.addEventListener('touchend',tendY);
 }
 
 function applyProjectListeners(el){
     el.addEventListener('touchstart',tstartX)
-    el.addEventListener('touchmove',tmoveX);
+    el.addEventListener('touchmove',tmoveCX);
     el.addEventListener('touchend',tendX);
 }
 function tstartX(tevt){
@@ -21,17 +21,23 @@ function tstartX(tevt){
     const i=index%yLoop;
     comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
 }
-function tmoveX(tevt){
-    let changedX=tevt.touches[0].clientX-prevTouchX.clientX;
+function tmoveCX(tevt){
+    globx=tevt.touches[0].clientX;
+    globt=this;
+    console.log('mecalliug');
+    requestAnimationFrame(tmoveX);
+}
+function tmoveX(){
+    let changedX=globx-prevTouchX;
     if (changedX)trajectoryLength+=Math.abs(changedX);//first time there's no prevTouch
     
-    let l=getTranslateX(this);
+    let l=getTranslateX(globt);
     comrades.forEach(function (cmr){
         cmr.style.transform=`translateX(${l+changedX}px)`;
     });
 
     //VARIABLES REASSIGNMENT
-    prevTouchX=tevt.touches[0];
+    prevTouchX=globx;
 }
 
 function pByN(n){
@@ -55,16 +61,21 @@ function tendX(tevt){
     prevTouchX={};
     comrades=[];
 }
-
-function tmoveY(tevt){
-    let changedY=tevt.touches[0].clientY-prevTouchY.clientY;
+function tmoveCY(tevt){
+    globy=tevt.touches[0].clientY;
+    globyt=this;
+    console.log('meYcalliug');
+    requestAnimationFrame(tmoveY);
+}
+function tmoveY(){
+    let changedY=globy-prevTouchY;
     if (changedY)trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
     
-    let t=getTranslateY(this);
-    this.style.transform=`translateY(${t+changedY}px)`;
+    let t=getTranslateY(globyt);
+    globyt.style.transform=`translateY(${t+changedY}px)`;
 
     //VARIABLES REASSIGNMENT
-    prevTouchY=tevt.touches[0];
+    prevTouchY=globy;
 };
 function tendY(tevt){
     
@@ -76,3 +87,7 @@ function tendY(tevt){
 // GLOBAL VARIABLES:
 var prevTouchX={};
 var prevTouchY={};
+var globx=0;
+var globt={};
+var globy=0;
+var globyt={};

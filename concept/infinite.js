@@ -47,7 +47,7 @@ function repositionLoopX(tevt){
     // it should process AFTER positioning
     setTimeout(()=>{
         const index = [...document.querySelector('.slider').querySelectorAll('.project')].indexOf(this);
-        const yLoop=document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
+        const yLoop = document.querySelector('.slider').dataset.packSize*document.querySelector('.projectPack').querySelectorAll('.project').length;
         const i=index%yLoop;
         const comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
         comrades.forEach(function(cmr){
