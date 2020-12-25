@@ -20,7 +20,7 @@ function redraw(){
 
         touchShiftL+=changedX;
         comrades.forEach(function (cmr){
-            cmr.style.transform=`translateX(${touchStartL+touchShiftL+changedX}px)`;
+            cmr.style.transform=`translateX(${touchStartL+touchShiftL}px)`;
         });
 
         // Y AXIS
@@ -28,7 +28,7 @@ function redraw(){
         if (changedY)trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
 
         touchShiftT+=changedY;
-        slider.style.transform=`translateY(${touchStartT+touchShiftT+changedY}px)`;
+        slider.style.transform=`translateY(${touchStartT+touchShiftT}px)`;
 
         //VARIABLES REASSIGNMENT
         prevTouch=curTouch;
@@ -48,7 +48,7 @@ function tstartX(tevt){
     const i=index%yLoop;
     comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
     touchStartL=getTranslateX(this);
-    touchShiftL=0;
+    touchShiftL=0.0;
     running=true;
     curTouch=tevt.touches[0];
     prevTouch=tevt.touches[0];
@@ -91,7 +91,7 @@ function tendX(tevt){
 
 function tstartY(tevt){
     touchStartT=getTranslateY(this);
-    touchShiftT=0;
+    touchShiftT=0.0;
 }
 
 function tmoveY(tevt){
