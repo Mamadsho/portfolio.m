@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             //GIVEN MORE nOfPages(project),left(project)
             selectedPageN=-Math.round(l/h)%NoPg; //PAGE N
 
-            console.log('Selection: ',selectedProjectN,selectedPageN);
+            // console.log('Selection: ',selectedProjectN,selectedPageN);
 
             //LAZY LOADING
             lazyLoad(Object.keys(data)[selectedProjectN],selectedPageN);

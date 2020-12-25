@@ -5,12 +5,6 @@ var running=false;
 
 function applyPhysics(){
     document.querySelectorAll(".project").forEach(applyProjectListeners);
-    applySliderListeners(document.querySelector('.slider'));
-}
-function applySliderListeners(sl){
-    sl.addEventListener('touchstart',tstartY);
-    sl.addEventListener('touchmove',tmoveY);
-    sl.addEventListener('touchend',tendY);
 }
 function redraw(){
     if(running){
@@ -34,7 +28,6 @@ function redraw(){
         prevTouch=curTouch;
     }
     requestAnimationFrame(redraw);
-    console.log(running,changedX,changedY,prevTouch);
 }
 redraw();
 function applyProjectListeners(el){
@@ -49,22 +42,14 @@ function tstartX(tevt){
     comrades=[pByN(i),pByN(i+yLoop),pByN(i+2*yLoop),pByN(i+3*yLoop)];
     touchStartL=getTranslateX(this);
     touchShiftL=0.0;
+    touchStartT=getTranslateY(slider);
+    touchShiftT=0.0;
     running=true;
     curTouch=tevt.touches[0];
     prevTouch=tevt.touches[0];
 }
 function tmoveX(tevt){
     curTouch=tevt.touches[0];
-    // let changedX=tevt.touches[0].clientX-prevTouchX.clientX;
-    // if (changedX)trajectoryLength+=Math.abs(changedX);//first time there's no prevTouch
-    
-    // let l=getTranslateX(this);
-    // comrades.forEach(function (cmr){
-    //     cmr.style.transform=`translateX(${l+changedX}px)`;
-    // });
-
-    // //VARIABLES REASSIGNMENT
-    // prevTouchX=tevt.touches[0];
 }
 
 function pByN(n){
@@ -88,27 +73,6 @@ function tendX(tevt){
     comrades=[];
     running=false;
 }
-
-function tstartY(tevt){
-    touchStartT=getTranslateY(this);
-    touchShiftT=0.0;
-}
-
-function tmoveY(tevt){
-    // let changedY=tevt.touches[0].clientY-prevTouchY.clientY;
-    // if (changedY)trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
-    
-    // let t=getTranslateY(this);
-    // this.style.transform=`translateY(${t+changedY}px)`;
-
-    // //VARIABLES REASSIGNMENT
-    // prevTouchY=tevt.touches[0];
-};
-function tendY(tevt){
-    
-    //NULLING VARS
-    //trajectoryLength=0; is nulled in positioning.js for click physX
-};
 
 // GLOBAL VARIABLES:
 var curTouch={};

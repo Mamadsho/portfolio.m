@@ -66,8 +66,8 @@
             "color":"#2e9f9f",
             "image": "projects/sto/img.jpg",
             "desc":{
-                "ru":"<p>Здесь было описание</p>",
-                "en":"<p>Here goes some desc</p>"
+                "ru":"<p>Здесь было бы описание</p>",
+                "en":"<p>Here would go some desc</p>"
             }
         }
     ],
