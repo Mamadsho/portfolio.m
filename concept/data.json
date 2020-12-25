@@ -2,7 +2,7 @@
     "Home":[
         {"name":"Home",
             "type":"html",
-            "icon":"projects/home/icons/home.png",
+            "icon":".projects/home/icons/home.png",
             "color":"#ff6b6b",
             "inner":{
                 "en":"<div class='flexers'><div class='photo' style='background-image:url(\"projects/home/home/me.jpg\"); background-position:center; background-size:cover'></div><div class='name'><h1 style='margin-bottom: 4.5px;'>Mamadsho <br> Nazaramonov</h1><hr style='margin:0'><p style='margin-top: 2px;'>Architecture and Math Enthusiast</p></div></div><div class='itemlist'><div style='padding-bottom: 0;padding-top: 0;'><div class='itemkey'>Languages</div><div class='itemvalue' style='background-color: inherit;padding: 0;'><div class='toggle_container' id='lang' onclick='toggle_lang()'><div class='toggle_button ' style='background-image: url(&quot;ru.svg&quot;)'></div><div class='toggle_button toggle_button_active' style='background-image: url(&quot;uk.svg&quot;);'></div></div></div></div><div><div class='itemkey'>Studies at</div><div class='itemvalue'>Tajik Technical University</div></div><div><div class='itemkey'>Lives in</div><div class='itemvalue'>Vahdat, Tajistan</div></div><div style='margin-bottom:32px'><div class='itemkey'>Date of Birth</div><div class='itemvalue'>May 27, 1998</div></div></div></div></div>",
@@ -10,7 +10,7 @@
             }
         },{"name":"SoftwareSkills",
             "type":"html",
-            "icon":"projects/home/icons/skills.png",
+            "icon":".projects/home/icons/skills.png",
             "color":"#db8787",
             "inner":{
                 "en":"<h1>Skills&Softwares</h1><div class='itemlist'><div style='background-color: #94d2df;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/photoshop.png&quot;);border-color: #3bcbf6;background-size: 110%;background-position: center;'></div><span class='skill_name'>Photoshop</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #38c5ef;'></div><div class='skill_dash' style='background-color: #38c5ef;'></div><div class='skill_dash' style='background-color: #38c5ef;'></div><div class='skill_dash' style='background-color: #a8ebff;'></div></div></div><div style='background-color: #f0e5d9;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/blender.png&quot;);border-color: #e8873b;background-size: 113%;background-position: -3px -3px;'></div><span class='skill_name'>Blender</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #eb893e;'></div><div class='skill_dash' style='background-color: #ea883c;'></div><div class='skill_dash' style='background-color: #ea883c;'></div><div class='skill_dash' style='background-color: #e6d1c4;'></div></div></div><div style='background-color: #eec7c8;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/autocad.png&quot;);border-color: #e54145;background-size: 111%;background-position: -1px 1px;background-color: #fafafa;'></div><span class='skill_name'>AutoCAD</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #ea4145;'></div><div class='skill_dash' style='background-color: #ea4145;'></div><div class='skill_dash' style='background-color: #ea4145;'></div><div class='skill_dash' style='background-color: #ea4145;'></div></div></div><div style='background-color: #bbc7e8;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/revit.png&quot;);border-color: #04174c;background-size: 113%;background-position: -3px -3px;background-color: #e9f4ff;'></div><span class='skill_name'>Revit</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #172d70;'></div><div class='skill_dash' style='background-color: #172d70;'></div><div class='skill_dash' style='background-color: #172d70;'></div><div class='skill_dash' style='background-color: #9ba7cc;'></div></div></div><div style='background-color: #aaa6a5;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/mdesigner.png&quot;);border-color: #f9c236;background-size: 104%;background-position: 0px -1px;background-color: #242424;'></div><span class='skill_name'>Marvelous Designer</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #fcc437;'></div><div class='skill_dash' style='background-color: #f8c136;'></div><div class='skill_dash' style='background-color: #d7d6d0;'></div><div class='skill_dash' style='background-color: #d7d6d0;'></div></div></div><div style='background-color: #bdd1d7;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/twinmotion.png&quot;);border-color: #282828;background-size: 113%;background-position: -3px -3px;background-color: #5b91bf;'></div><span class='skill_name'>Twinmotion</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #282828;'></div><div class='skill_dash' style='background-color: #282828;'></div><div class='skill_dash' style='background-color: #282828;'></div><div class='skill_dash' style='background-color: #a3b1b5;'></div></div></div><div style='background-color: #f7d9d9; margin-bottom:31px;'><div class='itemkey'><div class='skill_logo' style='background-image: url(&quot;projects/home/skills/icons/spainter.png&quot;);border-color: #e22c3a;background-size: 107%;background-position: -2px -2px;background-color: #fff9f9;'></div><span class='skill_name'>Substance Painter</span></div><div style='width:89px; margin-left:auto' class='itemvalue'><div class='skill_dash' style='background-color: #e32b38;'></div><div class='skill_dash' style='background-color: #e32b38;'></div><div class='skill_dash' style='background-color: #eeaeb2;'></div><div class='skill_dash' style='background-color: #eeaeb2;'></div></div></div></div>",
@@ -18,7 +18,7 @@
             }
         },{"name":"Interests",
             "type":"html",
-            "icon":"projects/home/icons/interests.png",
+            "icon":".projects/home/icons/interests.png",
             "color":"#db8787",
             "inner":{
                 "en":"<h1>Interests</h1><div class='itemlist' id='interests' style='background-color: #99b3d0;padding: 7px;border-radius: 31px; margin-bottom:35px;'><span style='background-color: #8a7ba1;color: white;'>VR/AR</span><span style='background-color: #E56B6F;color: white;'>AI</span><span style='background-color: #EAAC8B;'>Site Planning</span><span style='background-color: #E56B6F;color: white;width: 215px;'>Architecture</span><span style='background-color: #355070;color: #f4e0c6;width: 125px;'>Design</span><span style='background-color: 355070;color: #f9ddbd;width: 154px;'>Workflow Study/Dev</span><span style='background-color: #8a7ba1;color: white;'>Programming</span><span style='background-color: #eaac8b;'>Data Analysis</span><span style='background-color: #e56b6f;color: white;'>Math/PhysX</span><span style='background-color: #b56576;color: white;'>Politics/Economy</span><span style='background-color: #355070;color: #f4e0c6;'>Management</span></div>",
@@ -26,7 +26,7 @@
             }
         },{"name":"Contacts",
             "type":"html",
-            "icon":"projects/home/icons/contacts.png",
+            "icon":".projects/home/icons/contacts.png",
             "color":"#db8787",
             "inner":{
                 "en":"<h1>Contacts</h1><div class='itemlist'><div style='justify-content: left;background-color: #b9dbee;'><div><div style='background-image:url(&quot;projects/home/contacts/phone.png&quot;);border-color: #fefefe;' class='skill_logo contact_item_icon'></div></div><span class='skill_name' style='width: min-content;'><a href='tel:+992100500000' style='font-size: 20px;'><span style='display: inline-block;'>+992100500000</span></a></span></div><div style='justify-content: left;background-color: #ffdfdd;'><div><div style='background-image:url(&quot;projects/home/contacts/mail.png&quot;);background-position: center;background-repeat: no-repeat;background-size: 72%;border-color: #f94538;background-color: #fffefe;' class='skill_logo contact_item_icon'></div></div><span class='skill_name' style='width: min-content;'><a href='mailto:mamadsho.nazaramonov@gmail.com'><span style='display: inline-block;'>mamadsho.nazaramonov</span><span style='display: inline-block;'>@gmail.com</span></a></span></div><div style='justify-content: left;background-color: #aed0fd;'><div><div style='background-image:url(&quot;projects/home/contacts/fb.png&quot;);border-color: #fefefe;' class='skill_logo contact_item_icon'></div></div><span class='skill_name' style='width: min-content;'><a style='' href='https://fb.com/mamadshos'><span style='display: inline-block;'>fb.com/mamadshos</span></a></span></div><div style='justify-content: left;background-color: rgb(119, 119, 119);'><div><div style='background-image:url(&quot;projects/home/contacts/github.png&quot;);border-color: #201f1f;background-position: center;background-size: 229%;' class='skill_logo contact_item_icon'></div></div><span class='skill_name' style='width: min-content;'><a style='' href='https://github.com/mamadsho'><span style='display: inline-block;color: whitesmoke;'>github.com/mamadsho</span></a></span></div><div style='justify-content: left;background-color: #ddd; margin-bottom:30px'><div><div style='background-image:url(&quot;projects/home/contacts/pinterest.png&quot;);border-color: #fff;background-position: center;background-size: 102%;' class='skill_logo contact_item_icon'></div></div><span class='skill_name' style='width: min-content;'><a style='' href='https://www.pinterest.com/mamadshons'><span style='display: inline-block;'>@mamadshons</span></a></span></div></div>",
@@ -34,7 +34,7 @@
             }
         },{"name":"Settings",
             "type":"settings",
-            "icon":"projects/home/icons/settings.png",
+            "icon":".projects/home/icons/settings.png",
             "color":"#db8787",
             "inner":{
                 "en":"<h1>Settings</h1><div class='itemlist'><div style='padding-bottom: 0;padding-top: 0;'><div class='itemkey'>Language</div><div class='itemvalue' style='background-color: inherit;padding: 0;'><div class='toggle_container' id='lang' onclick='toggle_lang()'><div class='toggle_button' style='background-image: url(\"ru.svg\")'></div><div class='toggle_button toggle_button_active' style='background-image: url(\"uk.svg\");'></div></div></div></div><div style='padding-bottom: 0;padding-top: 0;'><div class='itemkey'>Fullscreen</div><div class='itemvalue' style='background-color: inherit;padding: 0;'><div class='toggle_container' id='fs' onclick='toggle_fs()'><div class='toggle_button' style='background-image: url(\"fs_off.svg\")'></div><div class='toggle_button' style='background-image: url(\"fs_on.svg\");'></div></div></div></div></div>",
@@ -45,7 +45,7 @@
     "STO":[
         {
             "type":"html",
-            "icon":"projects/sto/sto.png",
+            "icon":".projects/sto/sto.png",
             "color":"#51dfdf",
             "inner":{
                 "en":"<h1>Automobile Repair Shop</h1><div class='softwares'><div style='background-image: url(&quot;projects/home/skills/icons/revit.png&quot;);border-color: #04174c;background-size: 113%;background-position: -3px -3px;background-color: #e9f4ff;'></div><div style='background-image: url(&quot;projects/home/skills/icons/autocad.png&quot;);border-color: #e54145;background-size: 111%;background-position: -1px 1px;background-color: #fafafa;'></div><div style='background-image: url(&quot;projects/home/skills/icons/photoshop.png&quot;);border-color: #3bcbf6;background-size: 110%;background-position: center;'></div></div><ul class='tep'><li>Effective Area: 5000 м2</li><li>Volume: --- м3</li><li>Cars: 50 units</li></ul><p class='timeCreated'>May, 2019</p>",
@@ -53,20 +53,20 @@
             }
         },{
             "type": "image",
-            "icon":"projects/sto/icon3.svg",
+            "icon":".projects/sto/icon3.svg",
             "color":"#2e9f9f",
             "image": "projects/sto/img.jpg",
             "desc":{
-                "ru":"<p>Здесь было бы описание</p>",
+                "ru":"<p>ЗдесьЪ было бы описание</p>",
                 "en":"<p>Here goes some desc</p>"
             }
         },{
             "type": "image",
-            "icon":"projects/sto/icon3.svg",
+            "icon":".projects/sto/icon3.svg",
             "color":"#2e9f9f",
             "image": "projects/sto/img.jpg",
             "desc":{
-                "ru":"<p>Здесь было бы описание</p>",
+                "ru":"<p>ЗдесьЪ было бы описание</p>",
                 "en":"<p>Here would go some desc</p>"
             }
         }
@@ -74,7 +74,7 @@
     "Assets":[
         {
             "type":"html",
-            "icon":"projects/assets/assets.png",
+            "icon":".projects/assets/assets.png",
             "color":"#a6a6ff",
             "inner":{
                 "en":"<h1>Assets</h1><div class='softwares'><div style='background-image: url(&quot;projects/home/skills/icons/blender.png&quot;);border-color: #e8873b;background-size: 113%;background-position: -3px -3px;background-color: #f7f4e5;'></div><div style='background-image: url(&quot;projects/home/skills/icons/spainter.png&quot;);border-color: #e22c3a;background-size: 107%;background-position: -2px -2px;background-color: #fff9f9;'></div><div style='background-image: url(&quot;projects/home/skills/icons/mdesigner.png&quot;);border-color: #f9c236;background-size: 104%;background-position: 0px -1px;background-color: #242424;'></div></div><div class='tep projectInfo'><p>In this section some 3d assets are shown, through which I've been testing some workflows such as PBR, Cloth Simulations</p></div><p class='timeCreated'>- 2020</p>",
@@ -82,7 +82,7 @@
             }
         },{
             "type": "image",
-            "icon":"graphics/rendering.png",
+            "icon":".graphics/rendering.png",
             "color":"#7373d7",
             "image": "projects/assets/sarazm_pot.jpg",
             "desc":{
@@ -91,7 +91,7 @@
             }
         },{
             "type": "image",
-            "icon":"graphics/rendering.png",
+            "icon":".graphics/rendering.png",
             "color":"#7373d7",
             "image": "projects/assets/bowlingPins.jpg",
             "desc":{
@@ -100,7 +100,7 @@
             }
         },{
             "type": "image",
-            "icon":"graphics/rendering.png",
+            "icon":".graphics/rendering.png",
             "color":"#7373d7",
             "image": "projects/sto/img.jpg",
             "desc":{

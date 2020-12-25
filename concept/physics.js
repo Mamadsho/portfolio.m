@@ -10,19 +10,19 @@ function redraw(){
     if(running){
         // X AXIS
         var changedX=curTouch.clientX-prevTouch.clientX;
-        if (changedX)trajectoryLength+=Math.abs(changedX);//first time there's no prevTouch
+        trajectoryLength+=Math.abs(changedX);//first time there's no prevTouch
 
         touchShiftL+=changedX;
         comrades.forEach(function (cmr){
-            cmr.style.transform=`translateX(${touchStartL+touchShiftL}px)`;
+            cmr.style.transform=`translate(${touchStartL+touchShiftL}px,0px)`;
         });
 
         // Y AXIS
         var changedY=curTouch.clientY-prevTouch.clientY;
-        if (changedY)trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
+        trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
 
         touchShiftT+=changedY;
-        slider.style.transform=`translateY(${touchStartT+touchShiftT}px)`;
+        slider.style.transform=`translate(0,${touchStartT+touchShiftT}px)`;
 
         //VARIABLES REASSIGNMENT
         prevTouch=curTouch;
