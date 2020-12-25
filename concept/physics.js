@@ -8,26 +8,30 @@ function applyPhysics(){
 }
 function redraw(){
     if(running){
-        // X AXIS
-        var changedX=curTouch.clientX-prevTouch.clientX;
-        trajectoryLength+=Math.abs(changedX);//first time there's no prevTouch
-
-        touchShiftL+=changedX;
+        
         comrades.forEach(function (cmr){
             cmr.style.transform=`translate(${touchStartL+touchShiftL}px,0px)`;
         });
+        slider.style.transform=`translate(0,${touchStartT+touchShiftT}px)`;
+
+        // X AXIS
+        var changedX=curTouch.clientX-prevTouch.clientX;
+        touchShiftL+=changedX;
+
 
         // Y AXIS
         var changedY=curTouch.clientY-prevTouch.clientY;
-        trajectoryLength+=Math.abs(changedY);//first time there's no prevTouch
-
         touchShiftT+=changedY;
-        slider.style.transform=`translate(0,${touchStartT+touchShiftT}px)`;
+        
 
+        trajectoryLength+=Math.abs(changedX)+Math.abs(changedY);//first time there's no prevTouch
         //VARIABLES REASSIGNMENT
         prevTouch=curTouch;
+        
     }
-    requestAnimationFrame(redraw);
+    setTimeout(()=>{
+        requestAnimationFrame(redraw);
+    },70)
 }
 redraw();
 function applyProjectListeners(el){

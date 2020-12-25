@@ -37,7 +37,7 @@ function letsGo(){
     applyPhysics();
     applyPositioning();
     drawVp();
-    // placeAP();
+    placeAP();
     lazyLoad('Home',0);
     document.querySelector('.starter').classList.add('starterGo');
     setTimeout(()=>{
